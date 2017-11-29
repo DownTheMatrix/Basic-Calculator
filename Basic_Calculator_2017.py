@@ -1,11 +1,11 @@
-import time
+import time                           # This library is required for using the time.sleep() method.
 
 def welcome_alert():
     print('''
 Welcome to Basic Calculator 2017!
 ''')
 
-def calc():
+def calc():                     # As I didn't use the Math library here, I couldn't find a way to implement the square root operation.
     operation = input('''
 Please type in the math operation you would like to complete:
 + for addition
@@ -49,7 +49,7 @@ Please type in the math operation you would like to complete:
 def again():
     print("Do you want to perform another calculation? Y/N")
     more = input("")
-    if more.lower() == "y":
+    if more.lower() == "y":                                    
         time.sleep(0.5)
         calc()
     elif more.lower() == "n":
@@ -63,6 +63,6 @@ def again():
 
 welcome_alert()
 calc()
-x = 0
+x = 0               # This allows the user to perform more calculations in a row.
 while True:
     again()
